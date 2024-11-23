@@ -1,7 +1,7 @@
 # C2PLIA
 ## Cancer Plasticity Profiling by Live-cell Image Analysis
 
-![image_alt](https://github.com/Durdam/C2PLIA/blob/75f0bb511660a888c34db3c084c294e8c35c112d/Images/Pipeline_framework_image.png)
+![image_alt](https://github.com/Durdam/C2PLIA/blob/700197d24e83af85f2ec3ed05f893e6c74cb2ba1/Images/Pipeline_framework_image.png)
 
 We introduce a deep learning framework for joint registration and segmentation of multi-modal brain images. Under this framework, registration and segmentation tasks are deeply coupled and collaborated at two hierarchical layers. In the inner layer, we establish a strong feature-level coupling between the two tasks by learning a uniffed common latent feature representation. In the outer layer, we introduce a mutually supervised dual-branch network to decouple latent features and facilitate task-level collaboration between registration and segmentation.
 
