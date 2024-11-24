@@ -7,7 +7,7 @@ We developed a semi-automated imaging analysis pipeline: Cancer Plasticity Profi
 
 ## Below is a simplified workflow of the steps in this pipeline:
 
-![image_alt](https://github.com/Durdam/C2PLIA/blob/347c2b1f6cb56dce55de73a97dbb70d4c3472c32/Images/workflow_image.png)
+![image_alt](https://github.com/Durdam/C2PLIA/blob/2459d9d60497a2d9eb586a501697a549d6a026c3/Images/workflow_image.png)
 
 Steps to implement this pipeline in R:
 ## Using the Code
