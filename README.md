@@ -1,5 +1,5 @@
 # C2PLIA
-## Cancer Plasticity Profiling by Live-cell Image Analysis
+## **C**ancer **P**lasticity Profiling by Live-cell Image Analysis
 
 ![image_alt](https://github.com/Durdam/C2PLIA/blob/700197d24e83af85f2ec3ed05f893e6c74cb2ba1/Images/Pipeline_framework_image.png)
 
