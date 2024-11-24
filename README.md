@@ -23,16 +23,17 @@ Rscript 01_library_installation.R
 ### Generate segmented masks for live cell images using Cellpose
 Below is an example on how you can generate segmented masks from your raw microscopy images to give input to this pipeline. 
 Firstly, install the cellpose and create a virtual environment. Then use the cellpose pretrained models to segment the images and generate masks to be used as input to the tracking pipeline.
+If required, the pre-trained models can be fine tuned by using a small subset of manually labelled image masks and retraining the models to obtain higher accuracy.
 Information to install cellpose and create a conda environment can be found here: (https://cellpose.readthedocs.io/en/latest/installation.html)
 
 **Generate masks:**
 ```shell
 python -m cellpose --dir ~/path/to/images/directory/ --pretrained_model cyto3 --diameter 45 --flow_threshold 0.5 --cellprob_threshold 0 --min_size 15 --no_npy --save_tif --verbose
 ```
-Generate masks for each condition/cell_line in separate folders as shown in the given example directory **"ImageData"**. The first 3 hour of imaging data along with segmented masks are provided in the **"ImageData"** for different conditions from MCF7 cell line as example input data for the pipeline.
+Generate masks for each condition/cell_line in separate folders as shown in the given example directory **"ImageData"**. The first 3 hour of imaging data along with segmented masks are provided in the **"ImageData"** for different conditions as example input data for the pipeline.
 
 ### Cell tracking pipeline
-To run the tracking pipeline, segmented greyscale masks of each frame are required. To implement this on your own imaging data run the scripts in **"Run_Tracking_Pipeline"** directory. The primary tracking functions are available in **"Cell_Tracking_Primary_Functions"** directory which are called from `01_forward_labeling.R`
+To run the tracking pipeline, segmented greyscale masks of each frame are required. To implement this on your own imaging data run the scripts in **"Run_Cell_Tracking"** directory. The primary tracking functions are available in **"Cell_Tracking_Primary_Functions"** directory which are called from `01_forward_labeling.R` script.
 ```shell
 cd Run_Cell_Tracking
 Rscript 01_forward_labeling.R
@@ -51,11 +52,11 @@ Rscript plasticity_pipeline_01.R
 # Plotting and visualizations of the extracted cell features
 Rscript plasticity_pipeline_02.R
 
-# Compute growth rate: Required parameters:
+# Compute growth rate (G): Required parameters:
 # nframe = number of frames for which you have imaging data
 # nframe_gap = Time gap (in minutes) between each frame
-# time_0_frame = "y" or "n". Select "y" if your imaging data has image at time = 0
-Rscript plasticity_pipeline_03.R nframe=19 nframe_gap=10 time_0_frame=y
+# time_0_frame = "y" or "n". Select "y" if your imaging data has an image for time = 0
+Rscript plasticity_pipeline_03.R nframe=19 nframe_gap=10 time_0_frame=y  # Input according to your image data
 
 # Compute Plasticity_Index per cell
 Rscript plasticity_pipeline_04.R
