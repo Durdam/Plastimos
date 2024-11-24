@@ -5,6 +5,10 @@
 
 We developed a semi-automated imaging analysis pipeline: Cancer Plasticity Profiling by Live-cell Image Analysis (C2PLIA). This pipeline utilizes time-series images to track live cells through deep learning-based segmentation and employs a greedy algorithm to map cell trajectories, enabling the extraction of cellular phenotypic features. These features are used to study the EMT-mediated plasticity state of cells in response to the well-known EMT-inducing factors TGF-β and EGF and TGF-β. The pipeline assigns a "plasticity index" based on various parameters, including motility, morphology, and proliferation, thus providing a quantitative measure for estimating plasticity.
 
+## Below is a simplified workflow of the steps in this pipeline:
+
+![image_alt](https://github.com/Durdam/C2PLIA/blob/347c2b1f6cb56dce55de73a97dbb70d4c3472c32/Images/workflow_image.png)
+
 Steps to implement this pipeline in R:
 ## Using the Code
 ### Requirements
@@ -29,10 +33,4 @@ python -m cellpose --dir ~/path/to/images/directory/ --pretrained_model cyto3 --
 Generate masks for each condition/cell line in separate folder as done in the current implemented pipeline. See example of MCF7 directory in "Run_Tracking_Pipeline"
 
 
-### Joint training
 
-In the fine-tuning phase, we concatenate the pre-trained networks G, S and R to form G-S and G-R branches, and jointly optimize two branches in an iterative manner 
-
-```shell
-python co_train.py
-```
