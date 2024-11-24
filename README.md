@@ -52,7 +52,7 @@ Rscript plasticity_pipeline_01.R
 Rscript plasticity_pipeline_02.R
 
 # Compute growth rate: Required parameters:
-# nframe(number of frames for which you have imaging data)
+# nframe = number of frames for which you have imaging data
 # nframe_gap = Time gap (in minutes) between each frame
 # time_0_frame = "y" or "n". Select "y" if your imaging data has image at time = 0
 Rscript plasticity_pipeline_03.R nframe=19 nframe_gap=10 time_0_frame=y
