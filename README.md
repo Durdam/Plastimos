@@ -33,7 +33,7 @@ Generate masks for each condition/cell_line in separate folders as shown in the 
 ### Cell tracking pipeline
 To run the tracking pipeline, segmented greyscale masks of each frame are required. To implement this on your own imaging data run the scripts in **"Run_Tracking_Pipeline"** directory. The primary tracking functions are available in **"Cell_Tracking_Primary_Functions"** directory which are called from `01_forward_labeling.R`
 ```shell
-cd Run_Tracking_Pipeline
+cd Run_Cell_Tracking
 Rscript 01_forward_labeling.R
 Rscript 02_feature_calculation.R
 cd ..
