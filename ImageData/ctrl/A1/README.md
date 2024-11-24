@@ -1,1 +1,1 @@
-ctrl  A1
+ctrl-A1
