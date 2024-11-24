@@ -24,6 +24,7 @@ Rscript 01_library_installation.R
 Below is an example on how you can generate segmented masks from your raw microscopy images to give input to this pipeline. 
 Firstly, install the cellpose and create a virtual environment. Then use the cellpose pretrained models to segment the images and generate masks to be used as input to the tracking pipeline.
 Information to install cellpose and create a conda environment can be found here: (https://cellpose.readthedocs.io/en/latest/installation.html)
+
 **Generate masks:**
 ```shell
 python -m cellpose --dir ~/path/to/images/directory/ --pretrained_model cyto3 --diameter 45 --flow_threshold 0.5 --cellprob_threshold 0 --min_size 15 --no_npy --save_tif --verbose
