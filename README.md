@@ -19,11 +19,9 @@ git clone https://github.com/Durdam/C2PLIA.git
 cd C2PLIA
 Rscript 01_library_installation.R
 ```
-### Cell tracking pipeline input
-To run the tracking pipeline, the pipeline requres segmented greyscale masks of each frame. The implement the pipeline on your own imaging data run the scripts in **"Run_Tracking_Pipeline"** directory.
-Below is an example on how you can generate segmented masks from your raw microscopy images to give input to this pipeline. 
 
 ### Generate segmented masks for live cell images using Cellpose
+Below is an example on how you can generate segmented masks from your raw microscopy images to give input to this pipeline. 
 Firstly, install the cellpose and create a virtual environment. Then use the cellpose pretrained models to segment the images and generate masks to be used as input to the tracking pipeline.
 Information to install cellpose and create a conda environment can be found here: (https://cellpose.readthedocs.io/en/latest/installation.html)
 **Generate masks:**
@@ -31,6 +29,29 @@ Information to install cellpose and create a conda environment can be found here
 python -m cellpose --dir ~/path/to/images/directory/ --pretrained_model cyto3 --diameter 45 --flow_threshold 0.5 --cellprob_threshold 0 --min_size 15 --no_npy --save_tif --verbose
 ```
 Generate masks for each condition/cell line in separate folder as done in the given example directory **"ImageData"**. The first 1 hour of imaging data along with segmented masks is provided in the **ImageData** for different conditions.
+
+### Cell tracking pipeline
+To run the tracking pipeline, segmented greyscale masks of each frame are required. To implement this on your own imaging data run the scripts in **"Run_Tracking_Pipeline"** directory.
+Recommended to run it in RStudio for better visualization and inspection.
+```shell
+cd Run_Tracking_Pipeline
+Rscript 01_forward_labeling.R
+Rscript 02_feature_calculation.R
+```
+
+### Calculate Plasticity Index for each cell
+To compute the **Plasticity_Index**, visualize the morphology, motility and proliferation features for different conditions and to run the tSNE algorithm on the cell features use the scripts in **Cancer_Cell_Plasticity** directory. Recommended to run scripts in RStudio for better visualization and inspection.
+```shell
+cd Cancer_Cell_Plasticity
+Rscript plasticity_pipeline_01.R
+Rscript plasticity_pipeline_02.R
+Rscript plasticity_pipeline_03.R
+Rscript plasticity_pipeline_04.R
+Rscript plasticity_pipeline_05.R
+```
+The output data and images from the pipeline will be in ````shell ./output ``` and ````shell ./images ``` directory
+
+
 
 
 
