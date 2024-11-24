@@ -18,7 +18,6 @@ In addition to the above libraries, the following R packages must be installed t
 git clone https://github.com/Durdam/C2PLIA.git
 cd C2PLIA
 Rscript 01_library_installation.R
-cd ..
 ```
 
 ### Generate segmented masks for live cell images using Cellpose
