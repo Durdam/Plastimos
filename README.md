@@ -3,7 +3,7 @@
 
 ![image_alt](https://github.com/Durdam/C2PLIA/blob/700197d24e83af85f2ec3ed05f893e6c74cb2ba1/Images/Pipeline_framework_image.png)
 
-We introduce a semi-automated imaging analysis pipeline: **C**ancer **P**lasticity **P**rofiling by **L**ive-cell **I**mage **A**nalysis (C2PLIA). This pipeline utilizes time-series images to track live cells through deep learning-based segmentation and employs a greedy algorithm to map cell trajectories, enabling the extraction of cellular phenotypic features. These features are used to study the EMT-mediated plasticity state of cells in response to the well-known EMT-inducing factors EGF and TGF-β. The pipeline assigns a **"Plasticity Index"** based on various parameters, including motility, morphology, and proliferation, thus providing a quantitative measure for estimating plasticity. This scalable, live cell imaging based framework offers a powerful tool for quantifying EMT-mediated plasticity and can be applied to high-throughput drug screening.
+We introduce Plastimos, a semi-automated imaging analysis pipeline that utilizes time-series images to track live cells through deep learning-based segmentation and employs a greedy algorithm to map cell trajectories. This enables the extraction of cellular phenotypic features which are used to study the EMT-mediated plasticity state of cells in response to the well-known EMT-inducing factors EGF and TGF-β. The pipeline assigns a **"Plasticity Index"** based on various parameters, including motility, morphology, and proliferation, thus providing a quantitative measure for estimating plasticity. This scalable, live cell imaging based framework offers a powerful tool for quantifying EMT-mediated plasticity and can be applied to high-throughput drug screening.
 
 ## Below is a simplified workflow of the sequence of steps in this pipeline:
 
@@ -15,8 +15,8 @@ This code has been developed under **R 4.4.1**, and **Ubuntu 20.04.6**.
 ### Installation
 In addition to the above libraries, the following R packages must be installed to run the pipeline:
 ```shell
-git clone https://github.com/Durdam/C2PLIA.git
-cd C2PLIA
+git clone https://github.com/Durdam/Plastimos.git
+cd Plastimos
 Rscript 01_library_installation.R
 ```
 
