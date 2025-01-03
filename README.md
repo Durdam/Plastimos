@@ -1,7 +1,7 @@
 # Plastimos
 ## Cancer Plasticity Profiling by Live-cell Image Analysis
 
-![image_alt](https://github.com/Durdam/C2PLIA/blob/700197d24e83af85f2ec3ed05f893e6c74cb2ba1/Images/Pipeline_framework_image.png)
+![image_alt](https://github.com/Durdam/Plastimos/blob/14ccec1acc5d11fd06ad4162621ff1fd47d22880/Images/Pipeline_framework_v02.png)
 
 We introduce Plastimos, a semi-automated imaging analysis pipeline that utilizes time-series images to track live cells through deep learning-based segmentation and employs a greedy algorithm to map cell trajectories. This enables the extraction of cellular phenotypic features which are used to study the EMT-mediated plasticity state of cells in response to the well-known EMT-inducing factors EGF and TGF-β. The pipeline assigns a **"Plasticity Index"** based on various parameters, including motility, morphology, and proliferation, thus providing a quantitative measure for estimating plasticity. This scalable, live cell imaging based framework offers a powerful tool for quantifying EMT-mediated plasticity and can be applied to high-throughput drug screening.
 
